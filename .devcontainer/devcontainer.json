@@ -1,0 +1,19 @@
+{
+  "name": "Asteroids",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "context": ".."
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "golang.go"
+      ]
+    }
+  },
+  "postCreateCommand": "git lfs install && python3 --version && go version && (command -v bootdev && bootdev --version || true)",
+  "remoteUser": "vscode",
+  "updateRemoteUserUID": true
+}
