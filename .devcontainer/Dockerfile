@@ -17,6 +17,13 @@ RUN rm -f /etc/apt/sources.list.d/yarn.list /etc/apt/sources.list.d/yarn.list.sa
         golang-go \
         python3-venv \
         wget \
+        # --- For Rendering Game Windows ---
+        fluxbox \
+        tigervnc-standalone-server \
+        xvfb \
+        libsdl2-dev \
+        libsdl2-image-dev \
+        libsdl2-mixer-dev \
     && rm -rf /var/lib/apt/lists/*
 
 USER vscode

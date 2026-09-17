@@ -13,7 +13,13 @@
       ]
     }
   },
-  "postCreateCommand": "git lfs install && python3 --version && go version && (command -v bootdev && bootdev --version || true)",
+  "portsAttributes": {
+    "6080": {
+      "label": "Pygame VNC Display",
+      "onAutoForward": "openPreview"
+    }
+  },
+  "postCreateCommand": "git lfs install --force && python3 --version && go version && (command -v bootdev && bootdev --version || true)",
   "remoteUser": "vscode",
   "updateRemoteUserUID": true
 }
