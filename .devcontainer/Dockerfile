@@ -14,19 +14,14 @@ RUN rm -f /etc/apt/sources.list.d/yarn.list /etc/apt/sources.list.d/yarn.list.sa
         git \
         git-lfs \
         gh \
-        golang-go \
         python3-venv \
         wget \
         # --- For Rendering Game Windows ---
         fluxbox \
-        tigervnc-standalone-server \
         xvfb \
         x11vnc \
-        websockify \
         novnc \
         libsdl2-dev \
-        libsdl2-image-dev \
-        libsdl2-mixer-dev \
     && rm -rf /var/lib/apt/lists/*
 
 USER vscode

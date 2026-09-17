@@ -8,8 +8,7 @@
     "vscode": {
       "extensions": [
         "ms-python.python",
-        "ms-python.vscode-pylance",
-        "golang.go"
+        "ms-python.vscode-pylance"
       ]
     }
   },
@@ -24,7 +23,7 @@
     "SDL_AUDIODRIVER": "dummy"
   },
   "postCreateCommand": "git lfs install --force && python3 --version && go version && (command -v bootdev && bootdev --version || true) && chmod +x .devcontainer/start-vnc.sh",
-  "postStartCommand": "./.devcontainer/start-vnc.sh",
+  "postStartCommand": "setsid ./.devcontainer/start-vnc.sh",
   "remoteUser": "vscode",
   "updateRemoteUserUID": true
 }
