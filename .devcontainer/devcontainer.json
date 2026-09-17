@@ -19,7 +19,12 @@
       "onAutoForward": "openPreview"
     }
   },
-  "postCreateCommand": "git lfs install --force && python3 --version && go version && (command -v bootdev && bootdev --version || true)",
+  "containerEnv": {
+    "DISPLAY": ":1",
+    "SDL_AUDIODRIVER": "dummy"
+  },
+  "postCreateCommand": "git lfs install --force && python3 --version && go version && (command -v bootdev && bootdev --version || true) && chmod +x .devcontainer/start-vnc.sh",
+  "postStartCommand": "./.devcontainer/start-vnc.sh",
   "remoteUser": "vscode",
   "updateRemoteUserUID": true
 }

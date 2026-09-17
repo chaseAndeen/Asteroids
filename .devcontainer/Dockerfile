@@ -21,6 +21,9 @@ RUN rm -f /etc/apt/sources.list.d/yarn.list /etc/apt/sources.list.d/yarn.list.sa
         fluxbox \
         tigervnc-standalone-server \
         xvfb \
+        x11vnc \
+        websockify \
+        novnc \
         libsdl2-dev \
         libsdl2-image-dev \
         libsdl2-mixer-dev \
