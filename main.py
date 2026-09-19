@@ -1,7 +1,7 @@
 import pygame
 from constants import SCREEN_WIDTH, SCREEN_HEIGHT
-from player import Player
-from logger import log_state
+from player    import Player
+from logger    import log_state
 
 
 def main():
@@ -16,6 +16,7 @@ def main():
 
     x = SCREEN_WIDTH / 2
     y = SCREEN_HEIGHT / 2
+    player = Player(x, y)
 
     while True:
         log_state()
@@ -25,11 +26,10 @@ def main():
                 return
 
         screen.fill("black")
-
-        player = Player(x, y)
+        player.update(dt)
         player.draw(screen)
-
         pygame.display.flip()
+        
         dt = clock.tick(60) / 1000
 
 
